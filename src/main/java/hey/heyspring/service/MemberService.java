@@ -3,13 +3,18 @@ package hey.heyspring.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import hey.heyspring.domain.Member;
 import hey.heyspring.repository.MemberRepository;
 
+@Service
 public class MemberService {
     
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
